@@ -1,6 +1,7 @@
 
 
 const About = () => {
+  const title = "</About Me>"
   return (
     <div className="mt-8 md:mt-16 lg:mt-24 px-4 md:px-8 lg:px-12 flex flex-col md:flex-row items-center">
      
@@ -11,7 +12,7 @@ const About = () => {
       </div>
       {/* About Text */}
       <div className="max-w-xl">
-      <h2 className="text-3xl md:text-5xl font-mono text-center font-bold text-gray-800 mb-4">About Me</h2>
+      <h2 className="text-3xl md:text-5xl font-mono text-center font-bold text-gray-800 mb-4">{title}</h2>
         <p className="text-2xl font-mono text-gray-700 mb-4 t ">
           Hey there! I'm Suhani Sahu, a full stack developer with a keen eye for detail and a passion for crafting elegant solutions.
           <span className='text-blue-800 font-semibold'> Functionality is my forte, and I thrive on building seamless experiences from front to back.</span>

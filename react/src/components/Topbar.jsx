@@ -5,11 +5,11 @@ const Topbar = () => {
  
   
   return (
-    <nav className="w-full  backdrop-blur-lg bg-white-30% p-4 sticky">
+    <nav className="w-full  backdrop-blur-lg bg-white-30% p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex space-x-3 aspect-auto">
           <img className="rounded-full h-11 w-11 " src="./Suhanicoverimage.jpeg" />
-          <div className="text-blue-800 font-bold text-3xl font-mono ml-3">Portfolio</div>
+          <div className="text-black hover:text-blue-800 font-bold text-3xl font-mono ml-3">Portfolio</div>
         </div>
 
         {/* Hamburger menu for small screens */}
@@ -19,7 +19,7 @@ const Topbar = () => {
             type="button"
             className="text-blue-700  focus:outline-none"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-800" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black" viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
                 d="M2 6a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm0 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm0 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1z"
@@ -31,11 +31,11 @@ const Topbar = () => {
 
         {/* Navigation Links for larger screens */}
         <div className="hidden md:flex md:space-x-4 font-mono">
-          <a href="#" className="text-xl text-blue-700 hover:text-black">Home</a>
-          <a href="#" className="text-xl text-blue-700 hover:text-black">About Me</a>
-          <a href="#" className="text-xl text-blue-700 hover:text-black">Skills</a>
-          <a href="#" className="text-xl text-blue-700 hover:text-black">Projects</a>
-          <a href="#" className="text-xl text-blue-700 hover:text-black">Contact</a>
+          <a href="#" className="text-xl hover:text-blue-700 text-black">Home</a>
+          <a href="#" className="text-xl hover:text-blue-700 text-black">About Me</a>
+          <a href="#" className="text-xl hover:text-blue-700 text-black">Skills</a>
+          <a href="#" className="text-xl hover:text-blue-700 text-black">Projects</a>
+          <a href="#" className="text-xl hover:text-blue-700 text-black">Contact</a>
         </div>
 
        

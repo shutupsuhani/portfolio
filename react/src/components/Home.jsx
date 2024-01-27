@@ -43,7 +43,7 @@ const Home = () => {
       </div>
 
       <div className="mt-12 md:mt-16 lg:mt-20">
-        <h1 className="text-2xl md:text-3xl font-bold text-center text-slate-500 mb-6">Find Me On</h1>
+        <h1 className="text-xl md:text-2xl font-bold text-center text-slate-500 mb-6">Find Me On</h1>
         <div className="flex justify-center items-center flex-wrap gap-6 md:gap-8">
           <div className="bg-white p-3 md:p-4 rounded-md">
             <i className="fab fa-github text-black text-2xl md:text-3xl"></i>
