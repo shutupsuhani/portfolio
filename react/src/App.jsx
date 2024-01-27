@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-    <div className="w-full h-full bg-slate-300">
+    <div className="w-full h-full bg-slate-200">
     <Topbar/>
     <Home/>
     <About/>

@@ -21,7 +21,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="mt-6 border-t border-gray-800"></div>
+      <div className="mt-4 border-t border-gray-800"></div>
     </div>
   );
 };
