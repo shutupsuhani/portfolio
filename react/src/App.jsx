@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-    <div className="w-full h-full bg-slate-200">
-    <Topbar/>
+    <div className="w-full h-full">
+    <Topbar />
     <Home/>
     <About/>
     <Timeline/>

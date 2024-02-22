@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 const Contact = () => {
   
   const title= "</Contact Me>";
@@ -55,8 +54,8 @@ const Contact = () => {
     if (validateForm()) {
       // Handle form submission, e.g., send data to server
       console.log('Form submitted:', formData);
-      toast.success('Form submitted successfully');
-      alert("form submitted successfully")
+      toast.success('Thanks for Contact Me');
+      
 
       setFormData({
         name: '',
@@ -117,21 +116,22 @@ const Contact = () => {
           </ul>
 
           <div className="flex flex-col md:flex-row justify-center md:justify-evenly mb-16">             
-              <button className="h-16 w-32 place-content-center mt-6 hover:mt-2 bg-slate-100 hover:bg-blue-400 rounded-xl text-md shadow-2xl font-mono flex text-black hover:text-white transition duration-300 ease-in-out">
+              <button className="h-16 w-32 place-content-center mt-6 bg-slate-100 rounded-xl text-md shadow-2xl font-mono flex text-black hover:text-white hover:bg-slate-300 transition duration-700 ease-in-out">
                   <span className="mt-5 space-x-3">Chat</span>
                   <img src="./chat.png" className="h-7 rounded-full  space-x-4 mt-6 w-7"/>
               </button>
 
-             <button className="h-16 w-32 place-content-center mt-6 hover:mt-2 bg-slate-100 hover:bg-blue-400 rounded-xl text-md shadow-2xl font-mono flex text-black hover:text-white transition duration-300 ease-in-out">
-               <span className="mt-5 space-x-3">Mail</span>
-                <img src="./mail.png" className="h-5 rounded-full  space-x-4 mt-6 w-5"/>
-          
-             </button>
+              <button className="h-16 w-32 place-content-center mt-6 bg-slate-100 rounded-xl text-md shadow-2xl font-mono flex text-black hover:text-white hover:bg-slate-300 transition duration-700 ease-in-out">
+                    <span className="mt-5 space-x-3">Mail</span>
+                    <img src="./mail.png" className="h-5 rounded-full space-x-4 mt-6 w-5"/>
+              </button>
+
 
           </div>
         </div>
       </div>
       <div className="mt-8 border-t border-gray-400"></div>
+      <ToastContainer/>
     </div>
   );
 };

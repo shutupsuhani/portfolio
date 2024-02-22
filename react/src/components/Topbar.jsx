@@ -1,15 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Topbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
- 
+ const [isScrolled,SetIsScrolled]=useState(false);
   
+ const handleScroll=()=>{
+      SetIsScrolled(window.scrollY > 100);
+ }
+
+ useEffect (()=>{
+    window.addEventListener('scroll',handleScroll);
+
+    return ()=>{
+      window.removeEventListener('scroll',handleScroll);
+    };
+ },[]);
   return (
-    <nav className="w-full  backdrop-blur-lg bg-white-30% p-4">
+    <nav className={`fixed w-full top-0 left-0  ${isScrolled ? 'backdrop-blur-lg bg-slate-200 bg-opacity-50 shadow-lg transition duration-300 ease-in-out' : ''} p-4`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex space-x-3 aspect-auto">
           <img className="rounded-full h-11 w-11 " src="./Suhanicoverimage.jpeg" />
-          <div className="text-black hover:text-blue-800 font-bold text-3xl font-mono ml-3">Portfolio</div>
+          <div className="text-black hover:text-blue-400 font-bold text-3xl font-mono ml-3">Portfolio</div>
         </div>
 
         {/* Hamburger menu for small screens */}
@@ -31,11 +42,11 @@ const Topbar = () => {
 
         {/* Navigation Links for larger screens */}
         <div className="hidden md:flex md:space-x-4 font-mono">
-          <a href="#" className="text-xl hover:text-blue-700 text-black">Home</a>
-          <a href="#" className="text-xl hover:text-blue-700 text-black">About Me</a>
-          <a href="#" className="text-xl hover:text-blue-700 text-black">Skills</a>
-          <a href="#" className="text-xl hover:text-blue-700 text-black">Projects</a>
-          <a href="#" className="text-xl hover:text-blue-700 text-black">Contact</a>
+          <a href="#Home" className="text-xl hover:text-blue-700 text-black">Home</a>
+          <a href="#About" className="text-xl hover:text-blue-700 text-black">About Me</a>
+          <a href="#Skills" className="text-xl hover:text-blue-700 text-black">Skills</a>
+          <a href="#Project" className="text-xl hover:text-blue-700 text-black">Projects</a>
+          <a href="#Contact" className="text-xl hover:text-blue-700 text-black">Contact</a>
         </div>
 
        
@@ -55,10 +66,11 @@ const Topbar = () => {
               </svg>
             </button>
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-xl text-blue-700 hover:text-black">Home</a>
-              <a href="#" className="text-xl text-blue-700 hover:text-black">About</a>
-              <a href="#" className="text-xl text-blue-700 hover:text-black">Projects</a>
-              <a href="#" className="text-xl text-blue-700 hover:text-black">Contact</a>
+              <a href="./Home.jsx" className="text-xl text-blue-700 hover:text-black">Home</a>
+              <a href="./About.jsx" className="text-xl text-blue-700 hover:text-black">About</a>
+              <a href="./Skills.jsx" className="text-xl text-blue-700 hover:text-black">Skills</a>
+              <a href="./Project.jsx" className="text-xl text-blue-700 hover:text-black">Projects</a>
+              <a href="./Contact.jsx" className="text-xl text-blue-700 hover:text-black">Contact</a>
             </div>
           </div>
         )}
