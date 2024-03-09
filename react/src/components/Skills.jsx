@@ -2,7 +2,7 @@ const Skills = () => {
 
   const title = "</Skills>"
   return (
-    <div className="px-4  md:px-0">
+    <div className="px-4 mt-10  md:px-0">
       <div className="text-4xl text-center font-bold font-mono">{title}</div>
       <div className="flex flex-wrap justify-center mt-10">
         {/* General */}
@@ -15,6 +15,7 @@ const Skills = () => {
               <li>Javascript</li>
               <li>Data Structures</li>
               <li>MongoDB & mySQL</li>
+              <li>Git/Github</li>
             </ul>
           </div>
         </div>

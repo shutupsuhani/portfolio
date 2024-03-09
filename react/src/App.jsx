@@ -17,7 +17,6 @@ function App() {
     <Topbar />
     <Home/>
     <About/>
-    <Timeline/>
     <Skills/>
     <Project/>
     <Contact/>
